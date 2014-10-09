@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Go Chatting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/public/stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="/public/stylesheets/main.css" rel="stylesheet">
+    <script src="/public/javascripts/jquery-1.7.2.min.js"></script>
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <!-- <link href="/public/stylesheets/bootstrap-responsive.css" rel="stylesheet"> -->
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a class="brand" href="/">Go Chatting</a>
+          <div class="nav-collapse">
+<!--             <ul class="nav">
+              <li class="active"><a href="/">Lobby</a></li>
+            </ul> -->
+            <ul class="nav pull-right">
+
+            </ul>
+          </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+
+    <div class="container">

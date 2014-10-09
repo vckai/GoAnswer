@@ -1,0 +1,35 @@
+.lamp i{
+    background: url(../images/lamp_active.png) no-repeat;
+    height: 32px;
+    width: 32px;
+    display: block;
+    float: left;
+}
+
+#timer{
+    text-align: center;
+    z-index: 999;
+    top: 90px;
+    position: absolute;
+    font-size: 100px;
+    width: 100%;
+    display: none;
+}
+
+.exmpMain {
+    display: none;
+}
+
+.exmp{
+    width: 45%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#examOption{
+    text-align: center;
+}
+
+#outRoom, #joinRoom, #joinRebotRoom {
+    display: none;
+}

@@ -14,3 +14,7 @@ go get github.com/vckai/GoAnswer
 
 至于说明文档，等空了在完善下！
 ====================
+
+
+    <?php
+      echo 'hello, word!';

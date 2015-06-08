@@ -6,25 +6,26 @@ import (
 	"path"
 	"strings"
 
-	"github.com/vckai/GoAnswer/control"
-	"github.com/vckai/GoAnswer/libs"
-	"github.com/vckai/GoAnswer/model"
+	"vckai.com/GoAnswer/app"
+	"vckai.com/GoAnswer/control"
+	"vckai.com/GoAnswer/model"
+	"vckai.com/GoAnswer/server"
 )
 
 func main() {
 
-	app := libs.NewApp()
+	a := app.NewApp()
 
-	app.Get("/", control.Index)
-	app.Route("POST,GET", "/reg/", control.Register)
-	app.Route("POST,GET", "/login/", control.Login)
-	app.Get("/logout/", control.Logout)
-	app.Get("/ws/", control.Ws)
+	a.Get("/", control.Index)
+	a.Route("POST,GET", "/reg/", control.Register)
+	a.Route("POST,GET", "/login/", control.Login)
+	a.Get("/logout/", control.Logout)
+	a.Get("/ws/", control.Ws)
 
-	app.Get("/admin/", control.AdminIndex)
-	app.Route("POST,GET", "/addExam/", control.AdminExam)
+	a.Get("/admin/", control.AdminIndex)
+	a.Route("POST,GET", "/addExam/", control.AdminExam)
 
-	app.Static(func(context *libs.Context) { //静态文件处理
+	a.Static(func(context *app.Context) { //静态文件处理
 		static := "public"
 
 		url := strings.TrimPrefix(context.Url, "/")
@@ -47,9 +48,9 @@ func main() {
 		http.ServeFile(context.Response, context.Request, url)
 		context.IsEnd = true
 	})
-	model.NewModel(app.Config().MustValue("murl", "127.0.0.1")) //连接到mongodb
+	model.NewModel(a.Config().MustValue("murl", "127.0.0.1")) //连接到mongodb
 
-	control.InitWs()
+	server.InitServer()
 
-	app.Run()
+	a.Run()
 }

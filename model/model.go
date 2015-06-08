@@ -59,7 +59,7 @@ type Exam struct {
 	ExamId       int
 	ExamQuestion string
 	ExamOption   []string
-	ExamAnwser   int
+	ExamAnwser   int8
 	ExamResolve  string
 	ExamTime     time.Time
 }
@@ -134,7 +134,7 @@ func GetStatus() Status {
 /**
  * add exam..
  */
-func AddExam(question string, options []string, anwser int, resolve string) (int, error) {
+func AddExam(question string, options []string, anwser int8, resolve string) (int, error) {
 	c := currdb.C("exam")
 	status := GetStatus()
 

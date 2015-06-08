@@ -273,7 +273,7 @@ $(document).ready(function() {
             $("#outRoom").click();
             this.hide();
             $("#timer").hide();
-            $("#examMain"),hide();
+            $("#examMain").hide();
             $(".lamp").html("");
         },
         "modal": true,

@@ -5,18 +5,17 @@ import (
 	"regexp"
 	"strconv"
 
-	"github.com/vckai/GoAnswer/libs"
-	"github.com/vckai/GoAnswer/model"
+	"vckai.com/GoAnswer/app"
+	"vckai.com/GoAnswer/libs"
+	"vckai.com/GoAnswer/model"
 )
 
 const (
 	EXPTIME = 3600 * 24
 )
 
-/**
- * 首页
- */
-func Index(context *libs.Context) {
+// 首页
+func Index(context *app.Context) {
 	UserId := context.Cookie("UserId")
 	if UserId == "" {
 		context.Redirect("/login")
@@ -26,10 +25,8 @@ func Index(context *libs.Context) {
 	})
 }
 
-/**
- * 用户登录
- */
-func Login(context *libs.Context) {
+// 用户登录
+func Login(context *app.Context) {
 	UserId := context.Cookie("UserId")
 	if UserId != "" {
 		context.Redirect("/")
@@ -47,7 +44,7 @@ func Login(context *libs.Context) {
 		if len(Msg) == 0 { //登录操作
 			user, err := model.GetUser(user)
 			if err == nil { //用户存在
-				if user.UserPwd == genPwd(pwd) { //登录成功
+				if user.UserPwd == libs.GenPwd(pwd) { //登录成功
 					context.Cookie("UserId", strconv.Itoa(user.UserId), strconv.Itoa(EXPTIME))
 					context.Redirect("/")
 					return
@@ -61,18 +58,14 @@ func Login(context *libs.Context) {
 	})
 }
 
-/**
- * 用户退出
- */
-func Logout(context *libs.Context) {
+// 用户退出
+func Logout(context *app.Context) {
 	context.Cookie("UserId", "", "-3600")
 	context.Redirect("/login")
 }
 
-/**
- * 注册用户
- */
-func Register(context *libs.Context) {
+// 注册用户
+func Register(context *app.Context) {
 	Msg := ""
 
 	_ = model.GetStatus()
@@ -102,7 +95,7 @@ func Register(context *libs.Context) {
 		if len(Msg) == 0 { //注册用户
 			_, err := model.GetUser(user)
 			if err != nil { //没有被注册, 则写入注册信息
-				userId, err := model.AddUser(user, genPwd(pwd), 0, 0, 0)
+				userId, err := model.AddUser(user, libs.GenPwd(pwd), 0, 0, 0)
 				if err == nil {
 					_ = context.Cookie("UserId", strconv.Itoa(userId), strconv.Itoa(EXPTIME))
 					context.Redirect("/")

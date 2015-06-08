@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"vckai.com/GoAnswer/model"
+	"github.com/vckai/GoAnswer/model"
 
 	"labix.org/v2/mgo/bson"
 )

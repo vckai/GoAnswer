@@ -6,10 +6,10 @@ import (
 	"path"
 	"strings"
 
-	"vckai.com/GoAnswer/app"
-	"vckai.com/GoAnswer/control"
-	"vckai.com/GoAnswer/model"
-	"vckai.com/GoAnswer/server"
+	"github.com/vckai/GoAnswer/app"
+	"github.com/vckai/GoAnswer/control"
+	"github.com/vckai/GoAnswer/model"
+	"github.com/vckai/GoAnswer/server"
 )
 
 func main() {

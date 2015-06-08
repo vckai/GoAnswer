@@ -5,9 +5,9 @@ import (
 	"regexp"
 	"strconv"
 
-	"vckai.com/GoAnswer/app"
-	"vckai.com/GoAnswer/libs"
-	"vckai.com/GoAnswer/model"
+	"github.com/vckai/GoAnswer/app"
+	"github.com/vckai/GoAnswer/libs"
+	"github.com/vckai/GoAnswer/model"
 )
 
 const (

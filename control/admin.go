@@ -3,10 +3,9 @@ package control
 import (
 	"fmt"
 
-	"vckai.com/GoAnswer/app"
-	"vckai.com/GoAnswer/model"
-
-	"vckai.com/GoAnswer/server"
+	"github.com/vckai/GoAnswer/app"
+	"github.com/vckai/GoAnswer/model"
+	"github.com/vckai/GoAnswer/server"
 )
 
 func AdminIndex(context *app.Context) {

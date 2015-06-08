@@ -13,6 +13,9 @@ Go Answer
 
 安装好之后，通过http://127.0.0.1:9999/addExam 添加题库，这个属于比较简单地添加。
 
+[!图1](http://vckai.com/static/up/image/20150606/1433769112.png)
+[!图2](http://vckai.com/static/up/image/20150606/1433769230.png)
+
 TODO
 ====================
 * 增加TCP协议支持

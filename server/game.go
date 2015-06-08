@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"vckai.com/GoAnswer/model"
+	"github.com/vckai/GoAnswer/model"
 )
 
 var (

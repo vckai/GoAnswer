@@ -13,9 +13,13 @@ Go Answer
 
 安装好之后，通过http://127.0.0.1:9999/addExam 添加题库，这个属于比较简单地添加。
 
-![图1](http://vckai.com/static/up/image/20150606/1433769112.png)
+![图1](https://s01.vckai.com/up/2019/03/13/1552455625312902326.jpg)
 
-![图2](http://vckai.com/static/up/image/20150606/1433769230.png)
+![图2](https://s01.vckai.com/up/2019/03/13/1552455642764203260.jpg)
+
+![图3](https://s01.vckai.com/up/2019/03/13/1552455670680075165.jpg)
+
+![图4](https://s01.vckai.com/up/2019/03/13/1552455684039017095.jpg)
 
 TODO
 ====================
